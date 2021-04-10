@@ -1,0 +1,19 @@
+<form action="/addflight" method="POST">
+Päivä: <input type="date" name="date"> <br>
+Alku: <input type="time" name="time"> <br>
+Loppu: <input type="time" name="duration"> <br>
+Lähtöpaikka: <input type="text" name="startlocation"> <br>
+Laskupaikka: <input type="text" name="endlocation"> <br>
+Korkeusero: <input type="number" name="altitudedifference"> <br>
+Matka: <input type="number" name="distance"> <br>
+Maksimi korkeus: <input type="number" name="maxaltitude"> <br>
+Maksimi pudotus: <input type="number" name="maxsink"> <br>
+Maksimi nousu: <input type="number" name="maxraise"> <br>
+Sää: <input type="radio" name="weather" value="Aurinkoista">Aurinkoista
+<input type="radio" name="weather" value="Pilvistä">Pilvistä
+<input type="radio" name="weather" value="Sateista">Sateista <br>
+Muistiinpanot: <input type="text" name="notes"> <br>
+Haluatko jakaa lennon: <input type="radio" name="share" value="yes">Kyllä
+<input type="radio" name="share" value="no">Ei <br>
+<input type="submit" value="Lähetä">
+</form>

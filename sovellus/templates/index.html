@@ -1,7 +1,28 @@
-Viestien määrä: {{ count }}
-<hr>
-{% for message in messages %}
-{{ message[0] }}
+{% if session.username %}
+<p>Olet kirjautunut</p>
+{% for flight in flights %}
+Päivä: {{ flight[0] }} <br>
+Kesto: {{ flight[1] }} <br>
+Lähtöpaikka: {{ flight[2] }} <br>
+Laskupaikka: {{ flight[3] }} <br>
+Korkeusero: {{ flight[4] }} <br>
+Matka: {{ flight[5] }} <br>
+Maksimi korkeus: {{ flight[6] }} <br>
+Maksimi pudotus: {{ flight[7] }} <br>
+Maksimi nousu: {{ flight[8] }} <br>
+Sää: {{ flight[9] }} <br>
+Muistiinpanot: {{ flight[10] }} <br>
 <hr>
 {% endfor %}
-<a href="/new">Lähetä viesti</a>
+<a href="/newflight">Lisää lento</a>
+<a href="/logout">Kirjaudu ulos</a>
+{% else %}
+<h2>Tervetuloa lentopäiväkirjaan!</h2> <br>
+<form action="/login" method="POST">
+Tunnus: <input type="text" name="username"><br>
+Salasana: <input type="password" name="password"> <br>
+<input type="submit" value="Kirjaudu">
+</form>
+<br>
+<a href="/newuser">Rekisteröidy</a>
+{% endif %}

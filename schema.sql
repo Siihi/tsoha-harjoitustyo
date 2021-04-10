@@ -14,7 +14,7 @@ CREATE TABLE flights
     start_location TEXT,
     end_location TEXT,
     duration TIME,
-    altidute_difference INT,
+    altitude_difference INT,
     distance INT,
     max_altitude INT,
     max_sink INT,

@@ -13,3 +13,9 @@ Sovelluksen ominaisuuksia ovat:
 - Käyttäjä voi nähdä muiden seuralaisten lentoja ja jakaa omiaan myös seuralleen.
 - Ylläpitäjä voi lisätä ja poistaa käyttäjiä seuroista.
 - Ylläpitäjä voi nähdä ja muokata seuran tietoja.
+
+##Tämän hetkinen tilanne
+
+- Sovelluksessa voi kirjautua sisään ja ulos sekä luoda uuden tunnuksen.
+- Käyttäjä näkee omat lentonsa.
+- Käyttäjä voi lisätä lentoja.

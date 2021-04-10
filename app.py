@@ -18,7 +18,7 @@ def index():
         ids = session["user_id"]
     except:
         return render_template("index.html")
-    flights = db.session.execute("SELECT date, duration, start_location, end_location, altitude_difference, distance, max_altitude, max_sink, max_raise, weather, notes FROM flights WHERE user_id =:ids", {"ids": ids}).fetchall()
+    flights = db.session.execute("SELECT flights.date, flights.duration, flights.start_location, flights.end_location, flights.altitude_difference, flights.distance, flights.max_altitude, flights.max_sink, flights.max_raise, flights.weather, flights.notes FROM flights WHERE user_id =:ids", {"ids": ids}).fetchall()
     return render_template("index.html", flights=flights)
 
 @app.route("/login", methods=["POST"])
@@ -26,7 +26,7 @@ def login():
     app.secret_key = getenv("SECRET_KEY")
     username = request.form["username"]
     password = request.form["password"]
-    result = db.session.execute("SELECT password, id FROM users WHERE username=:username", {"username":username})
+    result = db.session.execute("SELECT users.password, users.id FROM users WHERE username=:username", {"username":username})
     user = result.fetchone()
     if user == None:
         return render_template("error.html", message="Käyttäjää ei löytynyt")

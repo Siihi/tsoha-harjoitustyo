@@ -19,3 +19,9 @@ Sovelluksen ominaisuuksia ovat:
 - Sovelluksessa voi kirjautua sisään ja ulos sekä luoda uuden tunnuksen.
 - Käyttäjä näkee omat lentonsa.
 - Käyttäjä voi lisätä lentoja.
+
+### Testaus
+
+- Testaaja voi luoda uuden käyttäjän ja lisätä käyttäjälle lentoja.
+- Testaaja voi myös kirjautua testikäyttäjälle testi:testi ja nähdä sieltä testilennon.
+- Testaaja voi näin myös havaita että lennot eivät näy muille käyttäjille.

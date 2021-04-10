@@ -16,6 +16,7 @@ Sovelluksen ominaisuuksia ovat:
 
 ## Tämän hetkinen tilanne
 
+- [Linkki Herokuun](https://tsoha-varjoliito.herokuapp.com/)
 - Sovelluksessa voi kirjautua sisään ja ulos sekä luoda uuden tunnuksen.
 - Käyttäjä näkee omat lentonsa.
 - Käyttäjä voi lisätä lentoja.

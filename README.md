@@ -14,7 +14,7 @@ Sovelluksen ominaisuuksia ovat:
 - Ylläpitäjä voi lisätä ja poistaa käyttäjiä seuroista.
 - Ylläpitäjä voi nähdä ja muokata seuran tietoja.
 
-##Tämän hetkinen tilanne
+## Tämän hetkinen tilanne
 
 - Sovelluksessa voi kirjautua sisään ja ulos sekä luoda uuden tunnuksen.
 - Käyttäjä näkee omat lentonsa.

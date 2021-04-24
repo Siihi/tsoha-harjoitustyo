@@ -1,0 +1,7 @@
+<form action="/removeflightaction" method="POST">
+Päiväys jolta haluat poistaa lennon: <input type="date" name="date"> <br>
+Aika jolta haluat poistaa lennon: <input type="time" name="time"> <br>
+<input type="hidden" name="csrf_token" values="{{ session.csrf_token }}">
+<input type="submit" value="Lähetä"><br>
+</form>
+<a href="/">Takaisin pääsivulle</a>

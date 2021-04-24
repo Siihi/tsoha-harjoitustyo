@@ -1,5 +1,6 @@
 {% if session.username %}
 <p>Olet kirjautunut</p>
+{{ info }}<br>
 {% for flight in flights %}
 Päivä: {{ flight[0] }} <br>
 Kesto: {{ flight[1] }} <br>
@@ -14,7 +15,12 @@ Sää: {{ flight[9] }} <br>
 Muistiinpanot: {{ flight[10] }} <br>
 <hr>
 {% endfor %}
-<a href="/newflight">Lisää lento</a>
+<a href="/newflight">Lisää lento</a><br>
+<a href="/removeflight">Poista lento</a><br>
+<a href="/allflights">Kaikki omat lennot</a><br>
+<a href="/othersflights">Muiden jakamia lentoja</a><br>
+<a href="/maintenance">Huoltonäkymä</a><br>
+<a href="/userinfo">Käyttäjätiedot</a><br>
 <a href="/logout">Kirjaudu ulos</a>
 {% else %}
 <h2>Tervetuloa lentopäiväkirjaan!</h2> <br>

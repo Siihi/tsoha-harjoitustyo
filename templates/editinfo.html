@@ -1,0 +1,7 @@
+<form action="/addeditinfo" method="POST">
+Nimi: <input type="text" name="name"> <br>
+Siipi: <input type="text" name="wing"> <br>
+Taso: <input type="text" name="level"> <br>
+<input type="hidden" name="csrf_token" value="{{ session.csrf_token }}">
+<input type="submit" value="Lähetä">
+</form>

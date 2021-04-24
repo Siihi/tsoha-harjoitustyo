@@ -21,28 +21,16 @@ CREATE TABLE flights
     max_raise INT,
     weather TEXT,
     notes TEXT,
-    share TEXT
-);
-
-CREATE TABLE wings
-(
-    id SERIAL PRIMARY KEY,
-    user_id INT REFERENCES users,
-    wing TEXT
-);
-
-CREATE TABLE societies
-(
-    id SERIAL PRIMARY KEY,
-    name TEXT
+    share TEXT,
+    visible INT
 );
 
 CREATE TABLE userinfo
 (
     id SERIAL PRIMARY KEY,
     user_id INT REFERENCES users,
-    wing_id INT REFERENCES wings,
-    society_id INT REFERENCES societies,
+    name TEXT,
+    wing TEXT,
     level TEXT
 );
 

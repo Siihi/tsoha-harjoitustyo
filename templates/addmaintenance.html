@@ -1,0 +1,6 @@
+<form action="/addmaintenancetodb" method="POST">
+Päivä: <input type="date" name="date"> <br>
+Muistiinpanot: <input type="text" name="notes"><br>
+<input type="hidden" name="csrf_token" value="{{ session.csrf_token }}">
+<input type="submit" value="Lähetä">
+</form>

@@ -15,5 +15,7 @@ Sää: <input type="radio" name="weather" value="Aurinkoista">Aurinkoista
 Muistiinpanot: <input type="text" name="notes"> <br>
 Haluatko jakaa lennon: <input type="radio" name="share" value="yes">Kyllä
 <input type="radio" name="share" value="no">Ei <br>
-<input type="submit" value="Lähetä">
+<input type="hidden" name="csrf_token" value="{{ session.csrf_token }}">
+<input type="submit" value="Lähetä"><br>
 </form>
+<a href="/">Takaisin pääsivulle</a>

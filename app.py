@@ -167,7 +167,10 @@ def allflights():
 def maintenances():
     ids = session["user_id"]
     lastmaintenance = db.session.execute("SELECT date, name FROM maintenances WHERE user_id=:ids ORDER BY date DESC", {"ids":ids}).fetchone()
-    notes = lastmaintenance[1]
+    try:
+        notes = lastmaintenance[1]
+    except:
+        return render_template("maintenance.html", need="Huoltoja ei löytynyt")
     currentdate = datetime.now().date()
     try:
         calc = currentdate - lastmaintenance[0]

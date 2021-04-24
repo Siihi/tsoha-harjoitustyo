@@ -14,8 +14,15 @@ Sovelluksen ominaisuuksia ovat:
 - Ylläpitäjä voi lisätä ja poistaa käyttäjiä seuroista.
 - Ylläpitäjä voi nähdä ja muokata seuran tietoja.
 
-##Tämän hetkinen tilanne
+## Tämän hetkinen tilanne
 
+- [Linkki Herokuun](https://tsoha-varjoliito.herokuapp.com/)
 - Sovelluksessa voi kirjautua sisään ja ulos sekä luoda uuden tunnuksen.
 - Käyttäjä näkee omat lentonsa.
 - Käyttäjä voi lisätä lentoja.
+
+### Testaus
+
+- Testaaja voi luoda uuden käyttäjän ja lisätä käyttäjälle lentoja.
+- Testaaja voi myös kirjautua testikäyttäjälle testi:testi ja nähdä sieltä testilennon.
+- Testaaja voi näin myös havaita että lennot eivät näy muille käyttäjille.

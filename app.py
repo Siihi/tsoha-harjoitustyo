@@ -21,6 +21,8 @@ def index():
         info = "Ei lentoja"
     else:
         info = "Viimeisimmät lennot:"
+    #LISÄÄ TÄHÄN!!!
+    #Keskimääräinen lentojen pituus, kaikki lennot yhteensä, yleisin sää, keskimääräiset korkeuserot, matkat, maksimit
     return render_template("index.html", flights=flights, info=info)
 
 @app.route("/login", methods=["POST"])
@@ -120,10 +122,14 @@ def addflight():
     max_raise = request.form["maxraise"]
     if max_raise == '':
         max_raise = 0
-    weather = request.form["weather"]
+    try:
+        weather = request.form["weather"]
+    except:
+        return render_template("error.html", message="Sää puuttuu")
     notes = request.form["notes"]
-    share = request.form["share"]
-    if share == '':
+    try:
+        share = request.form["share"]
+    except:
         return render_template("error.html", message="Jakamistiedot puuttuvat")
     db.session.execute("INSERT INTO flights (user_id, date, start_location, end_location, duration, altitude_difference, distance, max_altitude, max_sink, max_raise, weather, notes, share, visible) VALUES (:user_id, :date, :start_location, :end_location, :duration, :altitude_difference, :distance, :max_altitude, :max_sink, :max_raise, :weather, :notes, :share, :visible)", {"user_id":user, "date":date, "start_location":start_location, "end_location":end_location, "duration":duration, "altitude_difference":altitude_difference, "distance":distance, "max_altitude":max_altitude, "max_sink":max_sink, "max_raise":max_raise, "weather":weather, "notes":notes, "share":share, "visible":1})
     db.session.commit()

@@ -1,0 +1,52 @@
+body {
+    margin: auto;
+    max-width: 50em;
+    font-family: Arial, Helvetica, sans-serif;
+    background: white;
+}
+
+form {
+    display: block;
+    float: left;
+    padding: 1em 0em;
+    background: blanchedalmond;
+    border-radius: .5em;
+    margin-top: 1em;
+}
+
+nav li{
+    display: block;
+    padding: 1em;
+}
+
+nav li a{
+    text-decoration: none;
+    color: black;
+}
+
+nav {
+    display: block;
+    float: right;
+    background: lightblue;
+    border-radius: .5em;
+}
+
+.bluebox {
+    background: lightskyblue(255, 196, 0);
+    color: black;
+    padding: 10px;
+    width: 400px;
+    height: 400px;
+}
+
+.header1 {
+    background: lightskyblue;
+    color: black;
+    font-weight: bold;
+    padding: 2em;
+    font-size: x-large;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: .5em;
+    margin-top: .5em;
+}
+

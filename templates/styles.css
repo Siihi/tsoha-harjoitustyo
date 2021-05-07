@@ -1,0 +1,40 @@
+body {
+    margin: auto;
+    max-width: 50em;
+    font-family: Arial, Helvetica, sans-serif;
+    background: blanchedalmond;
+}
+
+form {
+    display: block;
+    float: left;
+}
+
+nav li{
+    display: block;
+    padding: 1em;
+    background: white;
+}
+
+nav {
+    display: block;
+    float: right;
+}
+
+.orangebox {
+    background: rgb(255, 196, 0);
+    color: black;
+    padding: 10px;
+    width: 400px;
+    height: 400px;
+}
+
+.header1 {
+    background: rgb(255, 196, 0);
+    color: black;
+    font-weight: bold;
+    padding: 2em;
+    font-size: small;
+    font-family: Arial, Helvetica, sans-serif;
+}
+

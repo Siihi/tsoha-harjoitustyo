@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css') }}">
+
 {% if session.username %}
 <p>Olet kirjautunut</p>
 {{ info }}<br>
@@ -23,12 +25,22 @@ Muistiinpanot: {{ flight[10] }} <br>
 <a href="/userinfo">Käyttäjätiedot</a><br>
 <a href="/logout">Kirjaudu ulos</a>
 {% else %}
-<h2>Tervetuloa lentopäiväkirjaan!</h2> <br>
+
+
+<body>
+    <div class="header1">
+        <h2>Tervetuloa lentopäiväkirjaan!</h2>
+    </div>
 <form action="/login" method="POST">
-Tunnus: <input type="text" name="username"><br>
-Salasana: <input type="password" name="password"> <br>
-<input type="submit" value="Kirjaudu">
+    <label for="username">Tunnus:</label>
+    <input type="text" name="username"><br>
+    <label for="password">Salasana:</label> 
+    <input type="password" name="password"> <br>
+    <input type="submit" value="Kirjaudu">
 </form>
 <br>
-<a href="/newuser">Rekisteröidy</a>
+<nav>
+    <li><a href="/newuser">Rekisteröidy</a></li>
+</nav>
+</body>
 {% endif %}

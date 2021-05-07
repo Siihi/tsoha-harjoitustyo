@@ -1,21 +1,41 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css') }}">
+
+<div class=header2>
+    Lisää lento
+</div>
 <form action="/addflight" method="POST">
-Päivä: <input type="date" name="date"> <br>
-Alku: <input type="time" name="time"> <br>
-Loppu: <input type="time" name="duration"> <br>
-Lähtöpaikka: <input type="text" name="startlocation"> <br>
-Laskupaikka: <input type="text" name="endlocation"> <br>
-Korkeusero: <input type="number" name="altitudedifference"> <br>
-Matka: <input type="number" name="distance"> <br>
-Maksimi korkeus: <input type="number" name="maxaltitude"> <br>
-Maksimi pudotus: <input type="number" name="maxsink"> <br>
-Maksimi nousu: <input type="number" name="maxraise"> <br>
-Sää: <input type="radio" name="weather" value="Aurinkoista">Aurinkoista
-<input type="radio" name="weather" value="Pilvistä">Pilvistä
-<input type="radio" name="weather" value="Sateista">Sateista <br>
-Muistiinpanot: <input type="text" name="notes"> <br>
-Haluatko jakaa lennon: <input type="radio" name="share" value="yes">Kyllä
-<input type="radio" name="share" value="no">Ei <br>
-<input type="hidden" name="csrf_token" value="{{ session.csrf_token }}">
-<input type="submit" value="Lähetä"><br>
+    <label for="date">Päivä:</label>
+    <input type="date" name="date"> <br>
+    <label for="time">Aloitusaika:</label>
+    <input type="time" name="time"> <br>
+    <label for="duration">Lopetusaika:</label>
+    <input type="time" name="duration"> <br>
+    <label for="startlocation">Lähtöpaikka:</label>
+    <input type="text" name="startlocation"> <br>
+    <label for="endlocation">Laskupaikka:</label>
+    <input type="text" name="endlocation"> <br>
+    <label for="altitudedifference">Korkeusero:</label>
+    <input type="number" name="altitudedifference"> <br>
+    <label for="distance">Matka:</label>
+    <input type="number" name="distance"> <br>
+    <label for="maxaltitude">Maksimi korkeus:</label>
+    <input type="number" name="maxaltitude"> <br>
+    <label for="maxsink">Maksimi pudotus:</label>
+    <input type="number" name="maxsink"> <br>
+    <label for="maxraise">Maksimi nousu:</label>
+    <input type="number" name="maxraise"> <br>
+    <label for="weather">Sää:</label>
+    <input type="radio" name="weather" value="Aurinkoista">Aurinkoista
+    <input type="radio" name="weather" value="Pilvistä">Pilvistä
+    <input type="radio" name="weather" value="Sateista">Sateista <br>
+    <label for="notes">Muistiinpanot:</label>
+    <input type="text" name="notes"> <br>
+    <label for="share">Haluatko jakaa lennon:</label>
+    <input type="radio" name="share" value="yes">Kyllä
+    <input type="radio" name="share" value="no">Ei <br>
+    <input type="hidden" name="csrf_token" value="{{ session.csrf_token }}">
+    <input id=button type="submit" value="Lähetä"><br>
 </form>
-<a href="/">Takaisin pääsivulle</a>
+<nav>
+    <li><a href="/">Takaisin pääsivulle</a></li>
+</nav>

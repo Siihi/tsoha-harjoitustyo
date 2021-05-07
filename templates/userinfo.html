@@ -1,8 +1,14 @@
-Käyttäjän tiedot
-<br>
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css') }}">
+
+<div class=header2>
+    Käyttäjän tiedot
+</div>
+<div class=flight>
 Nimi: {{ info[0] }}<br>
 Siipi: {{ info[1] }}<br>
 Taso: {{ info[2] }}<br>
-<hr>
-<a href="/editinfo">Muokkaa tietoja</a><br>
-<a href="/">Takaisin pääsivulle</a>
+</div>
+<nav>
+    <li><a href="/editinfo">Muokkaa tietoja</a></li><br>
+    <li><a href="/">Takaisin pääsivulle</a></li><br>
+</nav>

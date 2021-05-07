@@ -1,15 +1,20 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css') }}">
+
 {% for flight in flights %}
-Päivä: {{ flight[0] }} <br>
-Kesto: {{ flight[1] }} <br>
-Lähtöpaikka: {{ flight[2] }} <br>
-Laskupaikka: {{ flight[3] }} <br>
-Korkeusero: {{ flight[4] }} <br>
-Matka: {{ flight[5] }} <br>
-Maksimi korkeus: {{ flight[6] }} <br>
-Maksimi pudotus: {{ flight[7] }} <br>
-Maksimi nousu: {{ flight[8] }} <br>
-Sää: {{ flight[9] }} <br>
-Muistiinpanot: {{ flight[10] }} <br>
-<hr>
+<div class=flight>
+    Päivä: {{ flight[0] }} <br>
+    Kesto: {{ flight[1] }} <br>
+    Lähtöpaikka: {{ flight[2] }} <br>
+    Laskupaikka: {{ flight[3] }} <br>
+    Korkeusero: {{ flight[4] }} <br>
+    Matka: {{ flight[5] }} <br>
+    Maksimi korkeus: {{ flight[6] }} <br>
+    Maksimi pudotus: {{ flight[7] }} <br>
+    Maksimi nousu: {{ flight[8] }} <br>
+    Sää: {{ flight[9] }} <br>
+    Muistiinpanot: {{ flight[10] }} <br>
+</div>    
 {% endfor %}
-<a href="/">Palaa pääsivulle</a>
+<nav>
+    <li><a href="/">Takaisin pääsivulle</a></li>
+</nav>

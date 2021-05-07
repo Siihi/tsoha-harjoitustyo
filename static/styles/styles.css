@@ -8,15 +8,33 @@ body {
 form {
     display: block;
     float: left;
-    padding: 1em 0em;
+    padding: 1em;
+    width: 25em;
+    text-align: left;
     background: blanchedalmond;
     border-radius: .5em;
     margin-top: 1em;
 }
 
+form #button {
+    padding: .5em;
+    border: none;
+    text-align: center;
+    width: 10em;
+    background: lightblue;
+    border-radius: .5em;
+    margin: .5em;
+}
+
 nav li{
     display: block;
-    padding: 1em;
+    float: right;
+    padding: .5em;
+    width: 12em;
+    background: lightblue;
+    text-align: center;
+    border-radius: .5em;
+    margin-bottom: .5em;
 }
 
 nav li a{
@@ -26,17 +44,59 @@ nav li a{
 
 nav {
     display: block;
+    width: 13em;
     float: right;
-    background: lightblue;
+    margin-top: 1em;
+}
+
+.content {
+    background: white;
+    padding: 1em;
     border-radius: .5em;
 }
 
-.bluebox {
-    background: lightskyblue(255, 196, 0);
+.flight {
+    background: blanchedalmond;
+    float: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
     color: black;
-    padding: 10px;
-    width: 400px;
-    height: 400px;
+    padding: 1em;
+    border-radius: .5em;
+    margin: 1em;
+}
+
+.bluebox {
+    background: lightblue;
+    float: right;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    color: black;
+    padding: 1em;
+    border-radius: .5em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.loginshow {
+    background: blanchedalmond;
+    float: right;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    border-radius: .5em;
+    margin-top: .6em;
+    margin-right: .6em;
+}
+
+.errorbox {
+    background: orange;
+    float: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    padding-left: 1em;
+    padding-right: 1em;
+    border-radius: .5em;
+    margin-top: 1em;
 }
 
 .header1 {
@@ -50,3 +110,24 @@ nav {
     margin-top: .5em;
 }
 
+.header2 {
+    background: lightskyblue;
+    color: black;
+    font-weight: bold;
+    padding: 1em;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: .5em;
+    margin-top: .5em;
+}
+
+.headererror {
+    background: orangered;
+    color: black;
+    font-weight: bold;
+    padding: 1em;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: .5em;
+    margin-top: .5em;
+}

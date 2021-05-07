@@ -207,7 +207,7 @@ def addmaintenancetodb():
         abort(403)
     ids = session["user_id"]
     date = request.form["date"]
-    if date is None:
+    if date == '':
         return render_template("error.html", message="Päivämäärä puuttuu")
     text = request.form["notes"]
     db.session.execute("INSERT INTO maintenances (user_id, date, name) values (:ids, :date, :name)", {"ids":ids, "date":date, "name":text})

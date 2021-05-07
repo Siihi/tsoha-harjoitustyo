@@ -1,29 +1,38 @@
 <link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css') }}">
 
 {% if session.username %}
-<p>Olet kirjautunut</p>
-{{ info }}<br>
+<div class=loginshow>
+    <p>Olet kirjautunut</p>
+</div>
+<body>
+<div class=header2>
+    {{ info }}
+</div>
 {% for flight in flights %}
-Päivä: {{ flight[0] }} <br>
-Kesto: {{ flight[1] }} <br>
-Lähtöpaikka: {{ flight[2] }} <br>
-Laskupaikka: {{ flight[3] }} <br>
-Korkeusero: {{ flight[4] }} <br>
-Matka: {{ flight[5] }} <br>
-Maksimi korkeus: {{ flight[6] }} <br>
-Maksimi pudotus: {{ flight[7] }} <br>
-Maksimi nousu: {{ flight[8] }} <br>
-Sää: {{ flight[9] }} <br>
-Muistiinpanot: {{ flight[10] }} <br>
-<hr>
+<div class=flight>
+    Päivä: {{ flight[0] }} <br>
+    Kesto: {{ flight[1] }} <br>
+    Lähtöpaikka: {{ flight[2] }} <br>
+    Laskupaikka: {{ flight[3] }} <br>
+    Korkeusero: {{ flight[4] }} <br>
+    Matka: {{ flight[5] }} <br>
+    Maksimi korkeus: {{ flight[6] }} <br>
+    Maksimi pudotus: {{ flight[7] }} <br>
+    Maksimi nousu: {{ flight[8] }} <br>
+    Sää: {{ flight[9] }} <br>
+    Muistiinpanot: {{ flight[10] }} <br>
+</div>    
 {% endfor %}
-<a href="/newflight">Lisää lento</a><br>
-<a href="/removeflight">Poista lento</a><br>
-<a href="/allflights">Kaikki omat lennot</a><br>
-<a href="/othersflights">Muiden jakamia lentoja</a><br>
-<a href="/maintenance">Huoltonäkymä</a><br>
-<a href="/userinfo">Käyttäjätiedot</a><br>
-<a href="/logout">Kirjaudu ulos</a>
+<nav>
+    <li><a href="/newflight">Lisää lento</a></li>
+    <li><a href="/removeflight">Poista lento</a></li>
+    <li><a href="/allflights">Kaikki omat lennot</a></li>
+    <li><a href="/othersflights">Muiden jakamia lentoja</a></li>
+    <li><a href="/maintenance">Huoltonäkymä</a></li>
+    <li><a href="/userinfo">Käyttäjätiedot</a></li>
+    <li><a href="/logout">Kirjaudu ulos</a></li>
+</nav>
+</body>
 {% else %}
 
 
@@ -36,7 +45,7 @@ Muistiinpanot: {{ flight[10] }} <br>
     <input type="text" name="username"><br>
     <label for="password">Salasana:</label> 
     <input type="password" name="password"> <br>
-    <input type="submit" value="Kirjaudu">
+    <input id=button type="submit" value="Kirjaudu">
 </form>
 <br>
 <nav>

@@ -1,10 +1,22 @@
 <link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css') }}">
 
+<body>
+    <div class=header2>
+        <h3>Rekisteröidy</h3>
+    </div>
 <form action="/register" method="POST">
-Tunnuksessa täytyy olla ainakin 5 kirjainta. <br>
-Uusi tunnus: <input type="text" name="username"><br>
-Salasanassa täytyy olla ainakin 5 kirjainta.<br>
-Salasana: <input type="password" name="password"><br>
-Salasana uudestaan: <input type="password" name="check"><br>
-<input type="submit" value="Tee käyttäjä">
+    Uusi tunnus: <input type="text" name="username"><br>
+    Salasana: <input type="password" name="password"><br>
+    Salasana uudestaan: <input type="password" name="check"><br>
+<input id=button type="submit" value="Tee käyttäjä">
 </form>
+<div class=bluebox>
+    <p>Tunnuksessa täytyy olla vähintään 5 kirjainta.</p>
+    <p>Salasanassa täytyy olla vähintään 5 kirjainta.</p>
+</div>
+<nav>
+    <ul>
+    <li><a href="/">Takaisin kirjautumiseen</a></li>
+    </ul>
+</nav>
+</body>

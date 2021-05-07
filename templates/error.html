@@ -1,3 +1,11 @@
-<h1>ERROR</h1>
-<p>{{ message }}</p>
-<a href="/">Takaisin pääsivulle</a>
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css') }}">
+
+<div class=headererror>
+    ERROR
+</div>
+<div class=errorbox>
+    <p>{{ message }}</p>
+</div>
+<nav>
+    <li><a href="/">Takaisin pääsivulle</a></li><br>
+</nav>

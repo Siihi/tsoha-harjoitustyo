@@ -1,6 +1,17 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css') }}">
+
+<div class=header2>
+    Lisää huolto
+</div>
 <form action="/addmaintenancetodb" method="POST">
-Päivä: <input type="date" name="date"> <br>
-Muistiinpanot: <input type="text" name="notes"><br>
+    <label for="date">Päivä:</label>
+    <input type="date" name="date"> <br>
+    <label for="notes">Muistiinpanot:</label>
+    <input type="text" name="notes"><br>
 <input type="hidden" name="csrf_token" value="{{ session.csrf_token }}">
-<input type="submit" value="Lähetä">
+<input id=button type="submit" value="Lähetä">
 </form>
+<nav>
+    <li><a href="/maintenance">Takaisin huoltonäkymään</a></li><br>
+    <li><a href="/">Takaisin pääsivulle</a></li><br>
+</nav>

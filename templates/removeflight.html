@@ -1,7 +1,16 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css') }}">
+
+<div class=header2>
+    Poista lento
+</div>
 <form action="/removeflightaction" method="POST">
-Päiväys jolta haluat poistaa lennon: <input type="date" name="date"> <br>
-Aika jolta haluat poistaa lennon: <input type="time" name="time"> <br>
-<input type="hidden" name="csrf_token" values="{{ session.csrf_token }}">
-<input type="submit" value="Lähetä"><br>
+    <label for="date">Päivä jolta haluat poistaa lennon:</label>
+    <input type="date" name="date"> <br>
+    <label for="time">Aika jolta haluat poistaa lennon:</label>
+    <input type="time" name="time"> <br>
+    <input type="hidden" name="csrf_token" values="{{ session.csrf_token }}">
+    <input id=button type="submit" value="Lähetä"><br>
 </form>
-<a href="/">Takaisin pääsivulle</a>
+<nav>
+    <li><a href="/">Takaisin pääsivulle</a></li><br>
+</nav>

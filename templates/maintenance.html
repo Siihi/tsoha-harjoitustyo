@@ -1,5 +1,13 @@
-Huoltonäkymä<br>
-{{ need }}<br>
-Viime muistiinpano: {{ notes }} <br>
-<a href="/addmaintenance">Lisää huolto</a><br>
-<a href="/">Takaisin pääsivulle</a><br>
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css') }}">
+
+<div class=header2>
+    Huoltonäkymä
+</div>
+<div class=flight>
+    {{ need }}<br>
+    Viime muistiinpano: {{ notes }} <br>
+</div>
+<nav>
+    <li><a href="/addmaintenance">Lisää huolto</a></li><br>
+    <li><a href="/">Takaisin pääsivulle</a></li><br>
+</nav>

@@ -1,7 +1,19 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css') }}">
+
+<div class=header2>
+    Muokkaa tietoja
+</div>
 <form action="/addeditinfo" method="POST">
-Nimi: <input type="text" name="name"> <br>
-Siipi: <input type="text" name="wing"> <br>
-Taso: <input type="text" name="level"> <br>
-<input type="hidden" name="csrf_token" value="{{ session.csrf_token }}">
-<input type="submit" value="Lähetä">
+    <label for="name">Nimi:</label>
+    <input type="text" name="name"> <br>
+    <label for="wing">Siipi:</label>
+    <input type="text" name="wing"> <br>
+    <label for="level">Taso:</label>
+    <input type="text" name="level"> <br>
+    <input type="hidden" name="csrf_token" value="{{ session.csrf_token }}">
+    <input id=button type="submit" value="Lähetä">
 </form>
+<nav>
+    <li><a href="/userinfo">Takaisin tietonäkymään</a></li><br>
+    <li><a href="/">Takaisin pääsivulle</a></li><br>
+</nav>

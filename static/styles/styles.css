@@ -61,9 +61,16 @@ nav {
     font-family: Arial, Helvetica, sans-serif;
     font-size: medium;
     color: black;
+    max-width: 30em;
     padding: 1em;
     border-radius: .5em;
     margin: 1em;
+}
+
+.bodyflight {
+    background: white;
+    float: left;
+    max-width: 35em;
 }
 
 .bluebox {

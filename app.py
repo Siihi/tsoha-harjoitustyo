@@ -21,8 +21,6 @@ def index():
         info = "Ei lentoja"
     else:
         info = "Viimeisimmät lennot:"
-    #LISÄÄ TÄHÄN!!!
-    #Keskimääräinen lentojen pituus, kaikki lennot yhteensä, yleisin sää, keskimääräiset korkeuserot, matkat, maksimit
     return render_template("index.html", flights=flights, info=info)
 
 @app.route("/login", methods=["POST"])
